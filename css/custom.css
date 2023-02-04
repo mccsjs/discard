@@ -1047,13 +1047,13 @@ button {
 
 /* 个人信息卡片背景图 */
 [data-theme="light"] #aside-content > .card-widget.card-info {
-  background-image: url(/img/dj.png);
+  background-image: url(https://s2.loli.net/2023/02/04/3BFYxTlUo2kQstS.jpg);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;
 }
 [data-theme="dark"] #aside-content > .card-widget.card-info {
-  background-image: url(/img/xk.png);
+  background-image: url(https://s2.loli.net/2023/02/04/fYxKerF4REzX5CJ.jpg);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;

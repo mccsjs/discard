@@ -401,10 +401,10 @@ var now = new Date();
 function createtime() {
   // 当前时间
   now.setTime(now.getTime() + 1000);
-  var start = new Date("01/23/2023 00:00:00"); // 旅行者1号开始计算的时间
+  var start = new Date("01/22/2023 00:00:00"); // 旅行者1号开始计算的时间
   var dis = Math.trunc(0 + ((now - start) / 1000) * 17); // 距离=秒数*速度 记住转换毫秒
   var unit = (dis / 149600000).toFixed(6);  // 天文单位
-  var grt = new Date("01/23/2023 00:00:00");	// 网站诞生时间
+  var grt = new Date("01/22/2023 00:00:00");	// 网站诞生时间
   var days = (now - grt) / 1e3 / 60 / 60 / 24,
     dnum = Math.floor(days),
     hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum,
@@ -418,7 +418,7 @@ function createtime() {
   1 == String(snum).length && (snum = "0" + snum);
   let currentTimeHtml = "";
   (currentTimeHtml =
-    hnum > 18 && hnum <= 7
+    hnum < 18 && hnum >= 7
     ? `<img class='boardsign' src='https://img.shields.io/badge/M%E7%AB%99-%E5%AD%A6%E4%B9%A0%E4%B8%AD-blue' title='什么时候能够实现财富自由呀~'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`
     : `<img class='boardsign' src='https://img.shields.io/badge/M%E7%AB%99-%E7%9D%A1%E8%A7%89%E4%B8%AD-brightgreen' title='该睡觉啦~'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`),
     document.getElementById("workboard") &&
